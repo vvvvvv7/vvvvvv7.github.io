@@ -3,8 +3,8 @@
     <meta charset="utf-8"/>
 <meta name="description" content=""/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>dsadas | Gridea</title>
-<link rel="shortcut icon" href="https://vvvvvv7.github.io//favicon.ico?v=1580035844570">
+<title>centos7    yum安装mysql8.0.x | Gridea</title>
+<link rel="shortcut icon" href="https://vvvvvv7.github.io//favicon.ico?v=1580041053906">
 <link href="https://cdn.bootcss.com/font-awesome/5.11.2/css/all.css" rel="stylesheet">
 <link rel="stylesheet" href="https://vvvvvv7.github.io//styles/main.css">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -87,7 +87,7 @@
         <div class="post-detail gt-bg-theme-color-second">
             <article class="gt-post-content">
                 <h2 class="post-title">
-                    dsadas
+                    centos7    yum安装mysql8.0.x
                 </h2>
                 <div class="post-info">
                     <time class="post-time gt-c-content-color-first">
@@ -96,8 +96,40 @@
                     
                 </div>
                 <div class="post-content">
-                    <p>test<br>
-dasdas11我</p>
+                    <p>1.清除原有的mysql mariadb</p>
+<pre><code>  rpm -qa | grep mysql 
+  yum remove xxx
+</code></pre>
+<p>2.访问https://dev.mysql.com/downloads/repo/yum/上的MySQL Yum存储库下载页面<br>
+<img src="https://vvvvvv7.github.io//post-images/1580036197515.jpg" alt="" loading="lazy"><br>
+3.选择并下载适用于您的平台的发行包,如果是现在到本地之后需要上传到Linux指定路径<br>
+<img src="https://vvvvvv7.github.io//post-images/1580036246492.jpg" alt="" loading="lazy"><br>
+4.rpm -Uvh https://repo.mysql.com//mysql80-community-release-el7-1.noarch.rpm<br>
+5.更新yum源<br>
+yum clean all<br>
+yum makecache<br>
+6.开始安装MySQL<br>
+yum install mysql-community-server<br>
+<img src="https://vvvvvv7.github.io//post-images/1580036333952.jpg" alt="" loading="lazy"><br>
+7.开启启动<br>
+systemctl enable mysqld<br>
+8.启动<br>
+启动mysql<br>
+service mysqld start<br>
+查看mysql密码<br>
+grep 'temporary password' /var/log/mysqld.log<br>
+<img src="https://vvvvvv7.github.io//post-images/1580036672778.jpg" alt="" loading="lazy"><br>
+因为我之前的mysql 没有删除干净导致有两个密码<br>
+<img src="https://vvvvvv7.github.io//post-images/1580036750603.jpg" alt="" loading="lazy"><br>
+9.更改密码加密方式<br>
+vim /etc/my.cnf<br>
+[mysqld]<br>
+default_authentication_plugin=mysql_native_password<br>
+<img src="https://vvvvvv7.github.io//post-images/1580037033684.jpg" alt="" loading="lazy"><br>
+重启<br>
+10.允许远程连接<br>
+CREATE USER 'root'@'%' IDENTIFIED BY '123456';<br>
+更新权限 flush privileges;</p>
 
                 </div>
             </article>
