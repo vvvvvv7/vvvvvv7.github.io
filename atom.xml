@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://vvvvvv7.github.io/</id>
     <title>Gridea</title>
-    <updated>2020-01-26T12:18:44.257Z</updated>
+    <updated>2020-01-27T09:06:30.228Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://vvvvvv7.github.io/"/>
     <link rel="self" href="https://vvvvvv7.github.io/atom.xml"/>
@@ -10,6 +10,19 @@
     <logo>https://vvvvvv7.github.io/images/avatar.png</logo>
     <icon>https://vvvvvv7.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Gridea</rights>
+    <entry>
+        <title type="html"><![CDATA[centos7  编译安装mysql8.0.16]]></title>
+        <id>https://vvvvvv7.github.io/post/centos7-bian-yi-an-zhuang-mysql8016</id>
+        <link href="https://vvvvvv7.github.io/post/centos7-bian-yi-an-zhuang-mysql8016">
+        </link>
+        <updated>2020-01-26T12:18:45.000Z</updated>
+        <content type="html"><![CDATA[<p>因为项目使用mysql8.0.16 ,现在yum 安装只能安装mysql8.0.19,不兼容,所有现在手动编译安装<br>
+https://downloads.mysql.com/archives/community/<br>
+<img src="https://vvvvvv7.github.io//post-images/1580041487123.jpg" alt="" loading="lazy"></p>
+<figure data-type="image" tabindex="1"><img src="https://vvvvvv7.github.io//post-images/1580041516771.jpg" alt="" loading="lazy"></figure>
+<p>wget wget https://cdn.mysql.com/archives/mysql-8.0/mysql-8.0.16-el7-x86_64.tar.gz</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[centos7  mysql8.0.x 导入导出数据]]></title>
         <id>https://vvvvvv7.github.io/post/centos7-mysql80x-dao-ru-dao-chu-shu-ju</id>
